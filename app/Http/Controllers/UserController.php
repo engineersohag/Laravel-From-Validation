@@ -9,10 +9,13 @@ class UserController extends Controller
 {
     public function addUser(Request $request){
 
+        // validation.php file puth - Vendor->laravel->framework->src->Translation->lang->validation.php
+
         $request->validate([
             'name' => 'required',
             'email' => 'required|email',
-            'age' => 'required|numeric',
+            'password' => 'required|alpha_num|min:6',
+            'age' => 'required|numeric|between:18,40',
             'city' => 'required'
         ]);
 

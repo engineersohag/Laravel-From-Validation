@@ -47,6 +47,16 @@
                         </div>
 
                         <div class="mb-3">
+                            <label for="password" class="form-label">Password :</label>
+                            <input type="password" value="{{ old('password') }}" id="password" class="form-control @error('password') is-invalid @enderror"" name="password">
+                            <span class="text-danger">
+                                @error('password')
+                                    {{ $message }}
+                                @enderror
+                            </span>
+                        </div>
+
+                        <div class="mb-3">
                             <label for="age" class="form-label">Age :</label>
                             <input type="number" value="{{ old('age') }}" id="age" class="form-control @error('age') is-invalid @enderror"" name="age">
                             <span class="text-danger">
