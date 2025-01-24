@@ -8,3 +8,4 @@ Route::get('/', function () {
 });
 
 Route::post('/add', [UserController::class, 'addUser'])->name('addUser');
+
